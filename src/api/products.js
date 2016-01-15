@@ -11,9 +11,9 @@ class ProductsApi {
    */
   getProducts() {
     return this._$q.resolve([
-      new Product('Laptop', 500, 5),
-      new Product('Tea Cup', 5, 20),
-      new Product('Phone', 350, 25)
+      new Product('1', 'Laptop', 500),
+      new Product('2', 'Tea Cup', 5),
+      new Product('3', 'Phone', 350)
     ]);
   }
 }

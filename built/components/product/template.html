@@ -1,8 +1,17 @@
 <div>
-  <h2>{{ctrl.product.name}}</h2>
+  <h2 class="name">{{ctrl.product.name}}</h2>
 
-  Quantity: {{ctrl.product.quantity}}
-  Price: {{ctrl.product.price}}
+  Price: <span class="price">{{ctrl.product.price | currency : '£'}}</span>
 
-  <button ng-click="ctrl.addToBasket()">Add To Basket</button>
-</div>''
+  <button
+    class="add-to-basket"
+    ng-click="ctrl.addToBasket()">
+    Add To Basket
+  </button>
+
+  <button
+    class="remove-from-basket"
+    ng-click="ctrl.removeFromBasket()">
+    Remove From Basket
+  </button>
+</div>

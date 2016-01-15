@@ -1,4 +1,5 @@
 import module from '../../module';
+import '../../api/basket';
 
 module.directive('cmcProduct', () => {
   return {
@@ -14,4 +15,15 @@ module.directive('cmcProduct', () => {
 });
 
 class ProductController {
+  constructor(basketApi) {
+    this._basketApi = basketApi;
+  }
+
+  addToBasket() {
+    this._basketApi.addProduct(this.product);
+  }
+
+  removeFromBasket() {
+    this._basketApi.removeProduct(this.product);
+  }
 }

@@ -1,4 +1,5 @@
 import module from '../../module';
+import '../basket-summary/directive';
 
 module.directive('cmcApp', () => {
   return {

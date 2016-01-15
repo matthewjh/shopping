@@ -15,7 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'src/**/*.js'
+        'node_modules/jquery/dist/jquery.js',
+        'src/**/*.js',
+        'src/**/*.html'
     ],
 
 
@@ -25,7 +27,8 @@ module.exports = function(config) {
 
 
     preprocessors: {
-      "src/**/*.js": ["browserify"]
+      "src/**/*.js": ["browserify"],
+      'src/**/*.html': ['ng-html2js']
     },
 
     "babelPreprocessor": {
@@ -68,6 +71,12 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'src/',
+      prependPrefix: './',
+      moduleName: 'templates'
+    }
   })
 }
