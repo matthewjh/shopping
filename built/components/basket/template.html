@@ -1,0 +1,25 @@
+<h2>Basket</h2>
+
+<div>
+  <div>
+    Products in basket: <span class="count">{{ctrl.count}}</span>
+  </div>
+
+  <div>
+    Total Price: <span class="total-price">{{ctrl.totalPrice | currency: '£'}}</span>
+  </div>
+</div>
+
+<cmc-product 
+  ng-repeat="p in ctrl.products"
+  product="p">
+</cmc-product>
+
+<p>
+  <button
+    class="check-out"
+    ng-click="ctrl.checkOut()"
+    ng-disabled="!ctrl.products.length">
+    Check Out
+  </button>
+</p>

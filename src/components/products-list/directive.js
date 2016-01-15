@@ -1,6 +1,7 @@
 import module from '../../module';
 import '../../api/products';
 import '../product/directive';
+import '../basket-summary/directive';
 
 module.directive('cmcProductsList', () => {
   return {
