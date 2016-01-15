@@ -12,7 +12,7 @@ git clone https://github.com/matthewjh/shopping.git
 `
 
 `
-cd g10fx
+cd shopping
 `
 
 `
