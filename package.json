@@ -1,0 +1,31 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "build": "gulp build",
+    "start": "http-server built"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "angular-mocks": "^1.4.8",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-copy": "0.0.2",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-browserify": "^4.4.2",
+    "karma-jasmine": "^0.3.6"
+  },
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "karma-chrome-launcher": "^0.2.2"
+  }
+}
