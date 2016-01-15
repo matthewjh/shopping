@@ -5,7 +5,7 @@ var copy = require('gulp-copy');
 var fs = require('fs');
 
 gulp.task('copy', function () {
-  return gulp.src('./src/**/*.html')
+  return gulp.src(['./src/**/*.html', './src/**/*.css'])
     .pipe(copy('./built', { prefix: 1}));
 });
 

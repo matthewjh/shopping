@@ -1,0 +1,32 @@
+/*
+* note: I really didn't have enough time to focus on the appearence of the app
+*/
+
+cmc-basket-summary {
+  background-color: rgba(179, 212, 152, 0.16);
+  display: inline-block;
+  padding: 10px 50px;
+}
+
+cmc-product {
+  display: block;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.basket-buttons {
+  margin: 25px 0;
+}
+
+.remove-from-basket {
+  color: #C14545;
+}
+
+.add-to-basket {
+  color: #2F862F;
+}
+
+.place-order {
+  margin: 20px 0;
+  color: #04048A;
+}

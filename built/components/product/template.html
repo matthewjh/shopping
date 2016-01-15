@@ -3,15 +3,17 @@
 
   Price: <span class="price">{{ctrl.product.price | currency : '£'}}</span>
 
-  <button
-    class="add-to-basket"
-    ng-click="ctrl.addToBasket()">
-    Add To Basket
-  </button>
+  <div class="basket-buttons">
+    <button
+      class="add-to-basket"
+      ng-click="ctrl.addToBasket()">
+      Add To Basket
+    </button>
 
-  <button
-    class="remove-from-basket"
-    ng-click="ctrl.removeFromBasket()">
-    Remove From Basket
-  </button>
+    <button
+      class="remove-from-basket"
+      ng-click="ctrl.removeFromBasket()">
+      Remove From Basket
+    </button>
+  </div>
 </div>
