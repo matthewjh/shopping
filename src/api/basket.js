@@ -8,9 +8,7 @@ class BasketApi {
     this._$q = $q;
     this._$rootScope = $rootScope;
 
-    // mocked
-    this._aggregatedProducts = {};
-    this._products = [];
+    this.reset();
   }
 
   getSummary() {
@@ -71,6 +69,14 @@ class BasketApi {
 
       this._$rootScope.$broadcast('basketUpdated');
     }
+  }
+
+  reset() {
+    // mocked
+    this._aggregatedProducts = {};
+    this._products = [];
+
+    this._$rootScope.$broadcast('basketUpdated');
   }
 }
 

@@ -1,0 +1,38 @@
+<h2>Check out</h2>
+
+<h3>Select a Delivery Option</h3>
+
+<select
+  ng-model="ctrl.selectedDeliveryOption"
+  ng-options="ctrl.getDeliveryOptionLabel(o) for o in ctrl.deliveryOptions">
+</select>
+
+<h3>Summary</h3>
+
+
+<div>
+  <div>
+    Products in basket: <span class="count">{{ctrl.count}}</span>
+  </div>
+
+  <div>
+    Total Price: <span class="total-price">{{ctrl.totalPrice | currency: '£'}}</span>
+  </div>
+
+  <div>
+    Delivery Price: <span class="delivery-price">{{ctrl.selectedDeliveryOption.price | currency: '£'}}</span>
+  </div>
+
+  <div>
+    Grand Total: <span class="grand-total">{{ctrl.grandTotalPrice | currency: '£'}}</span>
+  </div>
+</div>
+
+<div>
+  <button 
+    class="place-order"
+    ng-click="ctrl.placeOrder()"
+    ng-disabled="!ctrl.selectedDeliveryOption || !ctrl.count || ctrl.isOrderBeingPlaced">
+      Place Order
+  </button>
+</div>
