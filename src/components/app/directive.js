@@ -4,6 +4,6 @@ module.directive('cmcApp', () => {
   return {
     restrict: 'E',
     scope: {},
-    templateUrl: './components/app/directive.html'
+    templateUrl: './components/app/template.html'
   };
 });
