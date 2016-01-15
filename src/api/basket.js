@@ -16,8 +16,8 @@ class BasketApi {
     let totalPrice = 0;
     let count = 0;
 
-    Object.keys(this._aggregatedProducts).forEach(name => {
-      let p = this._aggregatedProducts[name];
+    Object.keys(this._aggregatedProducts).forEach(id => {
+      let p = this._aggregatedProducts[id];
 
       totalPrice += p.product.price * p.quantity;
       count += p.quantity
