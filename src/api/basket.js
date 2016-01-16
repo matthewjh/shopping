@@ -20,7 +20,7 @@ class BasketApi {
       let p = this._aggregatedProducts[id];
 
       totalPrice += p.product.price * p.quantity;
-      count += p.quantity
+      count += p.quantity;
     });
 
     return this._$q.resolve({
